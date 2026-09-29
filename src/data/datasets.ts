@@ -1,0 +1,287 @@
+import { DatasetPreset } from '../types/recsys';
+
+export const DATASET_PRESETS: Record<string, DatasetPreset> = {
+  netflix: {
+    id: 'netflix',
+    name: 'Netflix 影视流媒体推荐',
+    subtitle: '电影与影视剧集内容个性化推荐实战场景',
+    icon: 'Clapperboard',
+    domain: '影视流媒体 (Video Streaming)',
+    description: '模拟 Netflix Prize 典型场景，包含科幻、经典剧情、动漫以及剧情惊悚多维度电影。展示用户对硬核科幻与悬疑艺术片的偏好聚集。',
+    users: [
+      {
+        id: 'u1',
+        name: '王小博 (科幻极客)',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face',
+        role: 'Hardcore Sci-Fi Fan',
+        latent3D: [0.85, -0.4, 0.7],
+        ratings: { i1: 5.0, i2: 5.0, i3: 2.0, i4: 4.0, i5: 4.5, i6: null, i7: 3.5, i8: null },
+      },
+      {
+        id: 'u2',
+        name: '陈清扬 (文艺独立影迷)',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+        role: 'Art & Indie Cinephile',
+        latent3D: [-0.6, 0.8, -0.3],
+        ratings: { i1: 3.0, i2: null, i3: 5.0, i4: 5.0, i5: 4.0, i6: 4.0, i7: 5.0, i8: 4.5 },
+      },
+      {
+        id: 'u3',
+        name: '李默 (硬核硬派影迷)',
+        avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&h=100&fit=crop&crop=face',
+        role: 'Classic Crime & Drama',
+        latent3D: [0.3, 0.6, 0.5],
+        ratings: { i1: 4.0, i2: 3.5, i3: 5.0, i4: null, i5: 5.0, i6: 2.0, i7: 4.5, i8: 5.0 },
+      },
+      {
+        id: 'u4',
+        name: '赵小鹿 (唯美治愈系)',
+        avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face',
+        role: 'Anime & Romance Lover',
+        latent3D: [-0.75, -0.5, -0.6],
+        ratings: { i1: 2.0, i2: null, i3: null, i4: 5.0, i5: 1.5, i6: 5.0, i7: 3.0, i8: 4.0 },
+      },
+      {
+        id: 'u5',
+        name: '周探员 (新晋爆米花用户)',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+        role: 'Casual Blockbuster Viewer',
+        latent3D: [0.65, -0.6, 0.2],
+        ratings: { i1: 4.5, i2: 5.0, i3: null, i4: null, i5: 3.0, i6: 4.0, i7: null, i8: null },
+      },
+      {
+        id: 'u6',
+        name: '何导师 (电影学院研究员)',
+        avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&h=100&fit=crop&crop=face',
+        role: 'Film Studies Scholar',
+        latent3D: [-0.3, 0.7, 0.6],
+        ratings: { i1: 4.0, i2: 4.5, i3: 5.0, i4: 4.5, i5: 4.5, i6: 3.0, i7: 5.0, i8: 5.0 },
+      },
+      {
+        id: 'u7',
+        name: '孙浩天 (冷启动新注册用户)',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+        role: 'New Registrant (Cold Start)',
+        latent3D: [0.1, 0.1, 0.1],
+        ratings: { i1: 4.5, i2: null, i3: null, i4: null, i5: null, i6: null, i7: null, i8: null },
+      }
+    ],
+    items: [
+      { id: 'i1', title: '盗梦空间 (Inception)', category: '科幻/悬疑', tags: ['诺兰', '时空潜行', '梦境层叠'], icon: 'Film', coverColor: '#3b82f6', latent3D: [0.8, -0.3, 0.5], popularity: 95 },
+      { id: 'i2', title: '星际穿越 (Interstellar)', category: '科幻/硬科幻', tags: ['黑洞', '相对论', '父女情感'], icon: 'Rocket', coverColor: '#6366f1', latent3D: [0.9, -0.4, 0.7], popularity: 92 },
+      { id: 'i3', title: '教父 (The Godfather)', category: '剧情/犯罪', tags: ['黑帮史诗', '家族荣耀', '经典名作'], icon: 'Crown', coverColor: '#b45309', latent3D: [0.2, 0.8, 0.6], popularity: 88 },
+      { id: 'i4', title: '千与千寻 (Spirited Away)', category: '动画/奇幻', tags: ['宫崎骏', '吉卜力', '成长救赎'], icon: 'Sparkles', coverColor: '#10b981', latent3D: [-0.7, 0.2, -0.5], popularity: 90 },
+      { id: 'i5', title: '低俗小说 (Pulp Fiction)', category: '犯罪/黑色幽默', tags: ['昆汀', '环状叙事', '黑色幽默'], icon: 'Flame', coverColor: '#ef4444', latent3D: [0.4, 0.5, 0.7], popularity: 84 },
+      { id: 'i6', title: '泰坦尼克号 (Titanic)', category: '浪漫/史诗灾难', tags: ['卡梅隆', '凄美爱情', '经典巨制'], icon: 'HeartHandshake', coverColor: '#ec4899', latent3D: [-0.6, -0.7, -0.4], popularity: 89 },
+      { id: 'i7', title: '寄生虫 (Parasite)', category: '剧情/黑色悬疑', tags: ['奉俊昊', '阶级切片', '奥斯卡金奖'], icon: 'Layers', coverColor: '#8b5cf6', latent3D: [0.1, 0.7, 0.4], popularity: 86 },
+      { id: 'i8', title: '肖申克的救赎 (Shawshank)', category: '经典/励志剧情', tags: ['希望之光', '自由信念', 'IMDb榜首'], icon: 'Sun', coverColor: '#059669', latent3D: [-0.1, 0.6, 0.3], popularity: 97 },
+    ]
+  },
+
+  spotify: {
+    id: 'spotify',
+    name: 'Spotify 音乐歌单个性化生成',
+    subtitle: '根据音频风格与收听历史生成日推心动歌单',
+    icon: 'Music',
+    domain: '流媒体音乐 (Audio Streaming)',
+    description: '通过音频特征隐向量（BPM、能量感、原声度、乐器配比）预测用户对未听歌单与独立单曲的喜欢程度。',
+    users: [
+      {
+        id: 'u1',
+        name: 'Linus (赛博电子极客)',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face',
+        role: 'Synthwave & EDM Fan',
+        latent3D: [0.9, 0.2, -0.4],
+        ratings: { i1: 5.0, i2: 1.5, i3: 4.0, i4: null, i5: 4.5, i6: null, i7: null, i8: 5.0 },
+      },
+      {
+        id: 'u2',
+        name: 'Sarah (深宵爵士咖啡馆客)',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+        role: 'Nocturne Jazz & Soul',
+        latent3D: [-0.5, 0.8, 0.6],
+        ratings: { i1: null, i2: 5.0, i3: 4.5, i4: 4.0, i5: null, i6: 4.0, i7: 5.0, i8: 1.0 },
+      },
+      {
+        id: 'u3',
+        name: 'Felix (古典交响发烧友)',
+        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face',
+        role: 'Classical Symphony Purist',
+        latent3D: [-0.7, 0.3, 0.8],
+        ratings: { i1: 1.0, i2: 3.5, i3: 2.0, i4: 5.0, i5: null, i6: 2.5, i7: 4.5, i8: null },
+      },
+      {
+        id: 'u4',
+        name: 'Anya (Lo-Fi 专注自习族)',
+        avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face',
+        role: 'Lo-Fi Study Beats',
+        latent3D: [-0.1, -0.6, 0.5],
+        ratings: { i1: 3.5, i2: 4.0, i3: 5.0, i4: 3.5, i5: 2.0, i6: 3.0, i7: 5.0, i8: 2.0 },
+      },
+      {
+        id: 'u5',
+        name: 'Marcus (嘻哈街舞潮流玩家)',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+        role: 'BoomBap & Trap Beatmaker',
+        latent3D: [0.7, -0.7, -0.3],
+        ratings: { i1: 4.0, i2: 1.0, i3: 2.5, i4: null, i5: 5.0, i6: 4.0, i7: null, i8: 4.5 },
+      },
+      {
+        id: 'u6',
+        name: 'Emma (独立摇滚与民谣迷)',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+        role: 'Indie Rock & Folk Vocal',
+        latent3D: [0.2, 0.5, -0.6],
+        ratings: { i1: 3.0, i2: 3.0, i3: null, i4: null, i5: 3.5, i6: 5.0, i7: 4.0, i8: 3.0 },
+      }
+    ],
+    items: [
+      { id: 'i1', title: 'Cyber City (合成波 Synthwave)', category: '电子/复古', tags: ['80s', '霓虹脉冲', '高能量'], icon: 'Radio', coverColor: '#ec4899', latent3D: [0.8, 0.1, -0.3], popularity: 86 },
+      { id: 'i2', title: 'Blue Train (午夜爵士萨克斯)', category: '爵士/布鲁斯', tags: ['即兴灵性', '低音提琴', '暖色调'], icon: 'Coffee', coverColor: '#d97706', latent3D: [-0.6, 0.7, 0.5], popularity: 82 },
+      { id: 'i3', title: 'Rainy Night (Lo-Fi 专注伴奏)', category: 'Lo-Fi/Chill', tags: ['雨声采样', '白噪音', '工作流伴奏'], icon: 'CloudRain', coverColor: '#0ea5e9', latent3D: [-0.2, -0.5, 0.4], popularity: 94 },
+      { id: 'i4', title: '命运交响曲 (贝多芬/维也纳爱乐)', category: '古典/交响乐', tags: ['严谨宏大', '四乐章', '经典无损'], icon: 'Disc', coverColor: '#64748b', latent3D: [-0.8, 0.4, 0.7], popularity: 80 },
+      { id: 'i5', title: 'Street Hustle (808重低音Trap)', category: '嘻哈/Rap', tags: ['炸裂Flow', '滚奏踩镲', '力量感'], icon: 'Zap', coverColor: '#f97316', latent3D: [0.7, -0.6, -0.2], popularity: 88 },
+      { id: 'i6', title: 'Sunset Boulevard (独立摇滚单曲)', category: '独立/摇滚', tags: ['车库失真', '诗意副歌', '吉他滑音'], icon: 'Guitar', coverColor: '#8b5cf6', latent3D: [0.3, 0.4, -0.5], popularity: 85 },
+      { id: 'i7', title: 'Zen Garden (氛围空灵手碟)', category: '氛围/冥想', tags: ['泛音振动', '舒缓心流', '自然共鸣'], icon: 'Feather', coverColor: '#10b981', latent3D: [-0.4, 0.2, 0.6], popularity: 79 },
+      { id: 'i8', title: 'Neuro Bass (未来电子重贝斯)', category: '未来电子', tags: ['合成调制', '电竞赛事', '节拍脉冲'], icon: 'Headphones', coverColor: '#06b6d4', latent3D: [0.9, -0.3, -0.5], popularity: 75 }
+    ]
+  },
+
+  news: {
+    id: 'news',
+    name: '新闻资讯流实时推送',
+    subtitle: '高时效性与长尾资讯的多目标内容分发体系',
+    icon: 'Newspaper',
+    domain: '信息流推荐 (News & Feed)',
+    description: '模拟今日头条、知乎高频动态信息流推荐。面对极高时效与新闻衰减周期，解析热门打压机制与长尾分发。',
+    users: [
+      {
+        id: 'u1',
+        name: '张总 (前沿AI与硬科技研究员)',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+        role: 'AI Tech Researcher',
+        latent3D: [0.85, 0.6, -0.2],
+        ratings: { i1: 5.0, i2: 4.5, i3: 5.0, i4: 1.0, i5: 3.0, i6: 4.0, i7: 5.0, i8: 3.5 },
+      },
+      {
+        id: 'u2',
+        name: '苏敏 (宏观金融分析师)',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face',
+        role: 'Global Macro Strategist',
+        latent3D: [-0.3, 0.8, -0.5],
+        ratings: { i1: 3.5, i2: 5.0, i3: null, i4: null, i5: null, i6: 4.5, i7: 3.0, i8: 5.0 },
+      },
+      {
+        id: 'u3',
+        name: '刘教练 (体育运动达人)',
+        avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face',
+        role: 'Sports & Fitness Enthusiast',
+        latent3D: [0.1, -0.8, 0.7],
+        ratings: { i1: null, i2: 1.0, i3: null, i4: 5.0, i5: null, i6: 3.0, i7: null, i8: null },
+      },
+      {
+        id: 'u4',
+        name: '梁文心 (文化与社会观察家)',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face',
+        role: 'Philosophy & Humanities Critic',
+        latent3D: [-0.7, 0.4, 0.5],
+        ratings: { i1: 3.0, i2: 4.0, i3: 4.5, i4: 2.0, i5: 5.0, i6: 2.5, i7: 3.5, i8: 4.5 },
+      },
+      {
+        id: 'u5',
+        name: '赵工 (新能源智能车架构师)',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+        role: 'EV & Energy Tech Engineer',
+        latent3D: [0.6, 0.3, 0.3],
+        ratings: { i1: 4.5, i2: 3.5, i3: 3.0, i4: null, i5: null, i6: 5.0, i7: 4.0, i8: 4.0 },
+      },
+      {
+        id: 'u6',
+        name: '陈同学 (冷启动新读者)',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face',
+        role: 'Fresh Reader (Cold Start)',
+        latent3D: [0.0, 0.0, 0.0],
+        ratings: { i1: null, i2: null, i3: 4.0, i4: null, i5: null, i6: null, i7: null, i8: null },
+      }
+    ],
+    items: [
+      { id: 'i1', title: '生成式AI与具身智能突破演进', category: '科技前沿', tags: ['LLM', '人形机器人', '基础模型'], icon: 'Cpu', coverColor: '#6366f1', latent3D: [0.8, 0.5, -0.2], popularity: 98 },
+      { id: 'i2', title: '全球央行降息潮与宏观资产配置', category: '财经金融', tags: ['货币政策', '美联储', '黄金原油'], icon: 'TrendingUp', coverColor: '#eab308', latent3D: [-0.3, 0.7, -0.4], popularity: 91 },
+      { id: 'i3', title: '韦伯望远镜捕获宇宙大爆炸早期巨星系', category: '深空科学', tags: ['天文物理', '红移光谱', '暗物质'], icon: 'Telescope', coverColor: '#3b82f6', latent3D: [0.5, 0.6, 0.3], popularity: 87 },
+      { id: 'i4', title: '欧冠决赛战术推演与高位逼抢解析', category: '体育赛事', tags: ['足球', '瓜迪奥拉', '高位逼抢'], icon: 'Trophy', coverColor: '#10b981', latent3D: [0.1, -0.7, 0.6], popularity: 89 },
+      { id: 'i5', title: '在数字加速时代重思存在主义哲学', category: '人文思考', tags: ['萨特', '注意力经济', '现代性'], icon: 'BookOpen', coverColor: '#8b5cf6', latent3D: [-0.6, 0.4, 0.4], popularity: 78 },
+      { id: 'i6', title: '固态电池商业化突破与里程焦虑终结', category: '新能源出行', tags: ['能量密度', '高镍电芯', '快充'], icon: 'BatteryCharging', coverColor: '#14b8a6', latent3D: [0.5, 0.3, 0.2], popularity: 84 },
+      { id: 'i7', title: '脑机接口临床转化：恢复肢体自主神经', category: '生物医疗', tags: ['神经拟态', '柔性电极', '医疗革新'], icon: 'Activity', coverColor: '#ec4899', latent3D: [0.7, 0.4, -0.1], popularity: 82 },
+      { id: 'i8', title: '零碳循环经济与工业副产物再提纯', category: '环境生态', tags: ['ESG', '碳配额', '绿色供应链'], icon: 'Leaf', coverColor: '#22c55e', latent3D: [-0.2, 0.6, 0.2], popularity: 74 }
+    ]
+  },
+
+  ecommerce: {
+    id: 'ecommerce',
+    name: '电商零售商品交叉推荐',
+    subtitle: '数码办公生态套系与相关品类交叉加购协同过滤',
+    icon: 'ShoppingCart',
+    domain: '电商零售 (E-Commerce Retail)',
+    description: '模拟数码外设买家在购买键盘、显示器时的“买了这个的人也买了...” (Frequently Bought Together) 经典推荐机理。',
+    users: [
+      {
+        id: 'u1',
+        name: '王工 (极简桌面搭建狂魔)',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+        role: 'Desk Setup Enthusiast',
+        latent3D: [0.8, -0.5, 0.6],
+        ratings: { i1: 5.0, i2: 5.0, i3: 4.5, i4: 4.0, i5: 5.0, i6: null, i7: 4.0, i8: 5.0 },
+      },
+      {
+        id: 'u2',
+        name: '李姐 (久坐颈椎痛行政主管)',
+        avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face',
+        role: 'Ergonomic Health Seeker',
+        latent3D: [-0.6, 0.7, 0.4],
+        ratings: { i1: null, i2: 3.5, i3: 5.0, i4: 4.0, i5: null, i6: 4.0, i7: null, i8: 4.5 },
+      },
+      {
+        id: 'u3',
+        name: '阿豪 (出差商旅高频飞行客)',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+        role: 'Frequent Business Traveler',
+        latent3D: [0.1, -0.3, -0.8],
+        ratings: { i1: 2.0, i2: null, i3: 1.5, i4: 5.0, i5: 4.5, i6: 5.0, i7: null, i8: 4.0 },
+      },
+      {
+        id: 'u4',
+        name: '小敏 (远程全栈自由开发者)',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face',
+        role: 'Full-Stack Remote Dev',
+        latent3D: [0.7, 0.2, 0.5],
+        ratings: { i1: 5.0, i2: 5.0, i3: 4.0, i4: 4.5, i5: 4.0, i6: 3.0, i7: 4.5, i8: 4.5 },
+      },
+      {
+        id: 'u5',
+        name: '老周 (传统文具与轻度电脑用户)',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+        role: 'Casual Office Worker',
+        latent3D: [-0.7, -0.5, -0.4],
+        ratings: { i1: 1.5, i2: 2.0, i3: 3.5, i4: null, i5: null, i6: null, i7: null, i8: 3.0 },
+      },
+      {
+        id: 'u6',
+        name: '钱同学 (学生党性价比猎手)',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face',
+        role: 'Value-First Student',
+        latent3D: [0.3, -0.6, -0.2],
+        ratings: { i1: 4.0, i2: 2.5, i3: null, i4: null, i5: 4.0, i6: 4.5, i7: 3.0, i8: 4.0 },
+      }
+    ],
+    items: [
+      { id: 'i1', title: '87键客制化机械键盘 (矮红轴)', category: '输入外设', tags: ['PBT键帽', '消音填充', '有线无线三模'], icon: 'Keyboard', coverColor: '#6366f1', latent3D: [0.7, -0.3, 0.5], popularity: 93 },
+      { id: 'i2', title: '27英寸 4K 144Hz 显色专业屏', category: '显示设备', tags: ['IPS广视角', 'HDR400', '98% DCI-P3'], icon: 'Monitor', coverColor: '#3b82f6', latent3D: [0.8, 0.2, 0.6], popularity: 95 },
+      { id: 'i3', title: '双背联动气压人体工学椅', category: '健康家具', tags: ['自适应腰托', '4D扶手', '莱茵认证气压杆'], icon: 'Armchair', coverColor: '#10b981', latent3D: [-0.5, 0.6, 0.4], popularity: 89 },
+      { id: 'i4', title: '主动降噪无线头戴耳机 (ANC)', category: '音频配件', tags: ['40mm动圈', '40小时续航', '双馈降噪'], icon: 'Headphones', coverColor: '#f43f5e', latent3D: [0.2, -0.2, -0.6], popularity: 94 },
+      { id: 'i5', title: '140W 桌面四口氮化镓充电站', category: '数码供电', tags: ['PD3.1协议', '温控芯', '多设备快充'], icon: 'Zap', coverColor: '#eab308', latent3D: [0.5, -0.4, 0.2], popularity: 87 },
+      { id: 'i6', title: '磁吸真无线充电宝 (10000mAh)', category: '便携配件', tags: ['强磁吸附', '轻薄航空铝', '双向快充'], icon: 'BatteryCharging', coverColor: '#8b5cf6', latent3D: [0.0, -0.5, -0.7], popularity: 85 },
+      { id: 'i7', title: '4K AI自动取景防窥广角摄像头', category: '视讯会议', tags: ['双麦阵列', '人脸居中跟踪', '物理遮蔽盖'], icon: 'Camera', coverColor: '#06b6d4', latent3D: [0.4, 0.3, 0.3], popularity: 76 },
+      { id: 'i8', title: '航空铝合金六档折叠笔记本支架', category: '办公收纳', tags: ['镂空散热', '防滑硅胶', '便携收纳'], icon: 'Laptop', coverColor: '#64748b', latent3D: [0.3, 0.1, 0.1], popularity: 91 }
+    ]
+  }
+};
